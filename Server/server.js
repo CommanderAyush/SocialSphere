@@ -158,6 +158,10 @@ app.get('/people',async(req,res)=>{
 
 }
 
+app.get("/",(req,res)=>{
+    res.send("Working");
+})
+
 const server=app.listen(port,(req,res)=>{
     console.log(port);
 })
