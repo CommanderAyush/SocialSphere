@@ -17,10 +17,10 @@ app.use(express.json());
 app.use(cookieParser());
 const db= new pg.Client({
 
-    user:"postgres",
-    host:"localhost",
+    user:process.env.db_user,
+    host:process.env.db_host,
     password:process.env.postgres_pass,
-    database:"SocialSphere",
+    database:process.env.db_name,
     port:5432
 })
 db.connect();
