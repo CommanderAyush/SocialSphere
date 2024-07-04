@@ -1,0 +1,391 @@
+.Register{
+    margin-top: 20px;
+    height: 95vh;
+    background-color: #F0F2F5 ;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    font-family: "Open Sans", sans-serif;
+}
+.Register>div
+{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.ProjectName>h2
+{
+    
+    color: #1877F2;
+    font-weight: 750;
+    letter-spacing: 1px;
+    font-size: 80px;
+    margin: 0;
+}
+.ProjectName>h2>svg
+{
+    height: 50px;
+    width: 50px;
+    
+}
+.ProjectName>p
+{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.Register>div>form
+{
+    background-color: white;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 400px;
+    grid-template-rows: repeat(4,70px);
+    row-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px 1px lightblue;
+}
+.Register>div>form>input{
+
+    padding: 15px;
+    margin: 10px;
+    font-size: 20px;
+    border: 1px solid #EDEEF0;
+    border-radius: 5px;
+}
+.Register>div>form>input:focus
+{
+    outline: 2px solid #1877F2;
+}
+.Register>div>form>button
+{
+    padding: 15px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color:#1877F2;
+    color: white;
+    border: 1px solid #EDEEF0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px lightblue;
+}
+.Register>div>form>button:hover
+{
+    cursor: pointer;
+}
+.Register>div>form>div{
+    padding: 15px;
+    margin: 10px;
+    font-size: 20px;
+    border: 1px solid #EDEEF0;
+    border-radius: 5px;
+}
+.Register>div>form>p
+{
+    font-size: 20px;
+    text-align: center;
+    padding: 15px;
+}
+.Register>div>form>p>button
+{
+    margin: 0;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #1877F2;
+}
+.Register>div>form>p>button:hover{
+    cursor: pointer;
+}
+.homepage{
+    height: 95vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+  
+}
+.contacts{
+    height: 95vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.Message{
+    height: 95vh;
+    background-color: #EAF5FE;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    margin-right: 10px;
+    box-shadow: 0 0 10px 0 rgb(204, 204, 204);
+}
+.ChatSection
+{
+    flex-grow: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+}
+.Send{
+    display: grid;
+}
+.Send>input
+{
+    flex-grow: 1;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
+    /* background-color: #aad6ff; */
+}
+.Send>input:focus
+{
+   
+    outline: 2px solid #1877F2;
+}
+.Send>button
+{
+    position: absolute;
+    color:#1877F2;
+    background-color:transparent;
+    align-self: center;
+    justify-self: flex-end;
+    border: 1px solid white;
+    height: 45px;
+    width: 45px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px 0px 10px 10px ;
+}
+.Send>button>svg
+{
+    margin-top: 3px;
+    margin-right: 3px;
+}
+.Send>button:hover
+{
+    cursor: pointer;
+    transform: scale(0.9);
+}
+.Send>label
+{
+    position: absolute;
+    color: black;
+    background-color:transparent;
+    align-self: center;
+    justify-self: flex-end;
+    height: 45px;
+    width: 45px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px 0px 10px 10px ;
+}
+.Send>label:hover
+{
+    cursor: pointer;
+    transform: scale(0.9);
+}
+.AppName
+{
+    color: #2077F0;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    height: 45px;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-bottom: 1px solid #b0bdc1;
+}
+.SocialSphere
+{
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 50px;
+    text-align: center;
+    margin: 0;
+   margin-left: 5px;
+}
+.icon
+{
+    height: 40px;
+    width: 40px;
+}
+.icon:hover
+{
+    transform: scale(0.9);
+}
+.ChatBox
+{
+    display: flex;
+    margin-top: 2px;
+    padding: 5px;
+    background-color: aliceblue;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-radius: 15px;
+}
+.ChatBox:hover
+{
+    cursor: pointer;
+}
+.Avatar
+{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    align-self: center;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin-left: 10px;
+}
+.Avatar>p
+{
+    font-size: 30px;
+    margin: 0;
+    opacity: .5;   
+}
+.ChatComponent
+{
+    font-size: 25px;
+    padding: 10px;
+     font-family: "Roboto", sans-serif;
+}
+.Bar
+{
+    width: 5px;
+    background-color: #2077F0;
+    color: #2077F0;
+    border-radius: 10px;
+    height: 40px;
+    align-items: center;
+}
+.texts
+{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: rgb(170, 170, 170);
+}
+::-webkit-scrollbar
+{
+    width: 3px;
+}
+::-webkit-scrollbar-thumb{
+    background: #b0bdc1;
+}
+.ChatSection>div
+{
+    display: flex;
+    flex-direction: column;
+   
+}
+.chat{
+    background-color: #1877F2;
+    display: flex; 
+    border-radius: 20px;
+    max-width: 50%;
+    font-size: 25px;
+   margin-top: 10px;
+   margin-left: 10px;
+   margin-right: 10px;
+   font-family: "Roboto", sans-serif;
+   color: white;
+}
+.chat>div
+{
+    width: 100%;
+    align-self: flex-end;
+    padding: 10px;
+}
+.online
+{
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    align-self:flex-end;
+    justify-self:flex-end;
+    border-radius: 50%;
+    background-color: #1FD884;
+}
+.logout
+{
+    display: grid;
+    flex-grow: 1;
+}
+.logout>p
+{
+  
+    justify-self:center;
+    align-self: flex-end;
+    font-size: 20px;
+     font-family: "Roboto", sans-serif;
+    margin: 20px 20px 10px 10px;
+ 
+}
+.logout>p>svg
+{
+    height: 25px;
+    width: 25px;
+    align-self: center;
+    margin-top: 10px;
+}
+.logout>p>button
+{
+    font-size: 20px;
+    color: white;
+    background-color: #2077F0;
+    height: 40px;
+    width: 90px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 5px;
+    align-self: center;
+    justify-self: center;
+}
+.logout>p>button:hover
+{
+    transform: scale(0.9);
+    cursor: pointer;
+}
+
+.Profile
+{
+    position:fixed;
+    background-color: #EAF5FE;
+    display: flex;
+    font-size: 30px;
+    width: 70%;
+    border-radius: 15px;
+}
+.Profile>p
+{
+    margin: 0;
+    padding: 10px;
+    font-weight: 540;
+    font-family:sans-serif;
+}
+.ChatSection>div>svg
+{
+    color: #1877F2;
+    height: 200px;
+    width: 200px;
+}
+.texts>p
+{
+    font-family: "Roboto", sans-serif;
+}
