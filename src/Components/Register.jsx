@@ -3,16 +3,21 @@ import axios from "axios";
 import { context } from "./App";
 function Register()
 {
+    
     const [username,setUsername,password,setPassword,reg,setReg]=React.useContext(context);
     const [regOrLog,setRegOrLog]=React.useState(false);
     async function register(ev)
     {
         ev.preventDefault();
+        
         var url=regOrLog?url="/register":url="/login";
         try {
+            
             var response=await axios.post(url,{username,password});
+            
             if(response.status==201)
                 {
+                    
                     setReg(true);
                 }
         } catch (error) {
