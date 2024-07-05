@@ -86,7 +86,7 @@ app.post("/register",async (req,res)=>{
     const data=req.body;
     const hashedPass=bcrypt.hashSync(data.password,bcryptSalt);
     const check=await db.query("SELECT * FROM users WHERE username=$1",[data.username]);
-    if(!check)
+    if(!check.rows.length)
     {
         await db.query("INSERT INTO users(username,password) values($1,$2)",
         [data.username,hashedPass]
