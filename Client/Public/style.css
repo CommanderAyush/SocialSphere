@@ -123,6 +123,8 @@
     border-radius: 20px;
     margin-right: 10px;
     box-shadow: 0 0 10px 0 rgb(204, 204, 204);
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 .ChatSection
 {
