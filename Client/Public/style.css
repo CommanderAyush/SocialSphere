@@ -365,7 +365,7 @@
 
 .Profile
 {
-    position:fixed;
+    position:sticky;
     background-color: #EAF5FE;
     display: flex;
     font-size: 30px;
