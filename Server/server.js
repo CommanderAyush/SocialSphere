@@ -7,6 +7,8 @@ import bcrypt from "bcryptjs"
 import cookieParser from "cookie-parser"
 import ws,{ WebSocketServer } from "ws"
 
+
+
 //Setting up everything
 const port=3000;
 dotenv.config();
@@ -21,7 +23,8 @@ const db= new pg.Client({
     host:process.env.db_host,
     password:process.env.postgres_pass,
     database:process.env.db_name,
-    port:5432
+    port:5432,
+    ssl:true
 })
 db.connect();
 
@@ -89,7 +92,7 @@ app.post("/register",async (req,res)=>{
     const check=await db.query("SELECT * FROM users WHERE username=$1",[data.username]);
     if(!check.rows.length)
     {
-        console.log(1);
+        
         await db.query("INSERT INTO users(username,password) values($1,$2)",
         [data.username,hashedPass]
         );
@@ -210,7 +213,7 @@ wss.on('connection',(socket,req)=>{
             socket.terminate();
             notifyEveryone();
         })
-    },10000)
+    },30000)
 
     socket.on('pong',()=>{
         clearTimeout(socket.deathTimer);
