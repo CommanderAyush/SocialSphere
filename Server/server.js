@@ -6,10 +6,11 @@ import cors from "cors"
 import bcrypt from "bcryptjs"
 import cookieParser from "cookie-parser"
 import ws,{ WebSocketServer } from "ws"
-
+import path from "path";
 
 
 //Setting up everything
+const __dirname=path.resolve();
 const port=3000;
 dotenv.config();
 const secret=process.env.Secret;
@@ -17,6 +18,7 @@ const app=express();
 const bcryptSalt=bcrypt.genSaltSync(10);
 app.use(express.json());
 app.use(cookieParser());
+app.use(express.static(path.join(__dirname,"..","Client","dist")));
 const db= new pg.Client({
 
     user:process.env.db_user,
@@ -164,7 +166,7 @@ app.get('/people',async(req,res)=>{
 }
 
 app.get("/",(req,res)=>{
-    res.send("Working");
+    res.sendFile(path.join(__dirname,"..","Client","dist","index.html"));
 })
 
 const server=app.listen(port,(req,res)=>{
