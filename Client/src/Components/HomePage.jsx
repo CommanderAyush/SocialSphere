@@ -20,7 +20,7 @@ function HomePage()
     },[])
     function connectingToWS()
     {
-        const temp=new WebSocket('ws://localhost:3000');
+        const temp=new WebSocket('https://socialsphere-01po.onrender.com');
         setWs(temp);
         temp.onmessage=({data})=>{
             const myData=JSON.parse(data);
