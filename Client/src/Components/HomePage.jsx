@@ -127,7 +127,7 @@ function HomePage()
                             {/* {val[1]===selectedUserId&&
                             <div className="Bar">|</div>
                             } */}
-                            <div className="Avatar" style={colors[(val[1].charCodeAt(0))%6]}>
+                            <div className="Avatar" style={colors[(val[1][0].charCodeAt(0))%6]}>
                                 <p>{val[1][0]}</p>
                                 <div className="online"></div>
                             </div>
@@ -142,7 +142,7 @@ function HomePage()
                             {/* {val[1]===selectedUserId&&
                             <div className="Bar">|</div>
                             } */}
-                            <div className="Avatar" style={colors[(val[1].charCodeAt(0))%6]}>
+                            <div className="Avatar" style={colors[(val[1][0].charCodeAt(0))%6]}>
                                 <p>{val[1][0]}</p>
                                 <div className="online" style={{backgroundColor:"#8F9AA1"}}></div>
                             </div>
