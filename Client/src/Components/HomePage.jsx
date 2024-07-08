@@ -120,7 +120,7 @@ function HomePage()
                     </div>
                     
                 </div>
-                {Object.entries(online).map(val=>
+                {Object.keys(online).length!=0&&Object.entries(online).map(val=>
                 {
                     return(
                         <div key={val[0]} className="ChatBox" onClick={()=>setselectedUserId(val[1])} style={val[1]===selectedUserId?{backgroundColor:"#aad6ff", boxShadow:"0 0 10px 0 rgb(204, 204, 204)"}:{backgroundColor:""}}>
@@ -135,7 +135,7 @@ function HomePage()
                         </div>
                     )    
                 })}
-                {Object.entries(offline).map(val=>
+                {Object.keys(offline).length!=0&&Object.entries(offline).map(val=>
                 {
                     return(
                         <div key={val[0]} className="ChatBox" onClick={()=>setselectedUserId(val[1])} style={val[1]===selectedUserId?{backgroundColor:"#aad6ff", boxShadow:"0 0 20px 0 rgb(204, 204, 204)"}:{backgroundColor:""}}>
