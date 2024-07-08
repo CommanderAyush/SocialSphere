@@ -160,6 +160,16 @@ function HomePage()
                 </div>
             </div>
             <div className="Message">
+            {
+                null!=selectedUserId&&
+                <div className="Profile">
+                    <div className="Avatar" style={colors[selectedUserId.charCodeAt(0)%6]}>
+                        <p>{selectedUserId[0]}</p>
+                        
+                    </div>
+                    <p>{selectedUserId}</p>
+                </div>
+            }
                 <div  className="ChatSection"> 
                     {null===selectedUserId?
                     <div className="texts">
@@ -167,13 +177,7 @@ function HomePage()
                         <p>  Click on your friend's name to start a conversation</p>
                     </div>:
                     <div >
-                        <div className="Profile">
-                            <div className="Avatar" style={colors[selectedUserId.charCodeAt(0)%6]}>
-                                <p>{selectedUserId[0]}</p>
-                                
-                            </div>
-                            <p>{selectedUserId}</p>
-                        </div>
+                        
                         {messagesWithoutDupes.map(val=>{
                                 return(
                                     <div key={val.id} className="chat" style={val.sender==-1?{backgroundColor:"#2077F0",alignSelf:"flex-end",textAlign:"end"}:{backgroundColor:"skyblue",alignSelf:"flex-start"}}>
