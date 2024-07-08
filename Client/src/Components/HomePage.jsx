@@ -20,7 +20,7 @@ function HomePage()
     },[])
     function connectingToWS()
     {
-        const temp=new WebSocket('https://social-sphere-gamma.vercel.app/');
+        const temp=new WebSocket('https://social-sphere-uzoa.onrender.com');
         setWs(temp);
         temp.onmessage=({data})=>{
             const myData=JSON.parse(data);
