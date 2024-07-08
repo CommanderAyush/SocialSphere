@@ -127,7 +127,7 @@ function HomePage()
                             {/* {val[1]===selectedUserId&&
                             <div className="Bar">|</div>
                             } */}
-                            {val && <div className="Avatar" style={{backgroundColor:colors[val[0]%6]}}>
+                            {val && <div className="Avatar" style={{backgroundColor:"#E8C5E5"}}>
                                 <p>{val[1][0]}</p>
                                 <div className="online"></div>
                             </div>}
@@ -142,7 +142,7 @@ function HomePage()
                             {/* {val[1]===selectedUserId&&
                             <div className="Bar">|</div>
                             } */}
-                            {val && <div className="Avatar" style={{backgroundColor:colors[val[0]%6]}}>
+                            {val && <div className="Avatar" style={{backgroundColor:"#E8C5E5"}}>
                                 <p>{val[1][0]}</p>
                                 <div className="online" style={{backgroundColor:"#8F9AA1"}}></div>
                             </div>}
