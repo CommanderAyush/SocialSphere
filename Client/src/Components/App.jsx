@@ -3,7 +3,7 @@ import Register from "./Register";
 import Homepage from "./HomePage";
 import axios from "axios";
 
-axios.defaults.baseURL="https://social-sphere-gamma.vercel.app/";
+axios.defaults.baseURL="https://social-sphere-gamma.vercel.app";
 axios.defaults.withCredentials=true;
 export const context=React.createContext([]);
 function App()
