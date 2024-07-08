@@ -127,7 +127,7 @@ function HomePage()
                             {/* {val[1]===selectedUserId&&
                             <div className="Bar">|</div>
                             } */}
-                            {val && <div className="Avatar" style={colors[1]}>
+                            {val && <div className="Avatar" style={colors[val[0]%6]}>
                                 <p>{val[1][0]}</p>
                                 <div className="online"></div>
                             </div>}
@@ -142,7 +142,7 @@ function HomePage()
                             {/* {val[1]===selectedUserId&&
                             <div className="Bar">|</div>
                             } */}
-                            {val && <div className="Avatar" style={colors[2]}>
+                            {val && <div className="Avatar" style={colors[val[0]%6]}>
                                 <p>{val[1][0]}</p>
                                 <div className="online" style={{backgroundColor:"#8F9AA1"}}></div>
                             </div>}
@@ -163,10 +163,7 @@ function HomePage()
             {
                 null!=selectedUserId&&
                 <div className="Profile">
-                    <div className="Avatar" style={colors[selectedUserId.charCodeAt(0)%6]}>
-                        <p>{selectedUserId[0]}</p>
-                        
-                    </div>
+                   
                     <p>{selectedUserId}</p>
                 </div>
             }
