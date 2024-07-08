@@ -12,8 +12,8 @@ function HomePage()
     const [selectedUserId,setselectedUserId]=React.useState(null);
     const [newMessage,setNewMessage]=React.useState("");
     const [message,setMessage]=React.useState([]);
-    const colors=[{backgroundColor:"#E8C5E5"},{backgroundColor:"#5ce1e6"},{backgroundColor:"#7ed957"},
-        {backgroundColor:"#ff5757"},{backgroundColor:"#FFE88A"},{backgroundColor:"#ff914d"}];
+    const colors=["#E8C5E5","#5ce1e6","#7ed957",
+        "#ff5757","#FFE88A","#ff914d"];
     const messagebox=useRef();
     React.useEffect(()=>{
         connectingToWS();
@@ -127,7 +127,7 @@ function HomePage()
                             {/* {val[1]===selectedUserId&&
                             <div className="Bar">|</div>
                             } */}
-                            {val && <div className="Avatar" style={colors[1]}>
+                            {val && <div className="Avatar" style={{backgroundColor:colors[val[0]%6]}}>
                                 <p>{val[1][0]}</p>
                                 <div className="online"></div>
                             </div>}
@@ -142,7 +142,7 @@ function HomePage()
                             {/* {val[1]===selectedUserId&&
                             <div className="Bar">|</div>
                             } */}
-                            {val && <div className="Avatar" style={colors[0]}>
+                            {val && <div className="Avatar" style={{backgroundColor:colors[val[0]%6]}}>
                                 <p>{val[1][0]}</p>
                                 <div className="online" style={{backgroundColor:"#8F9AA1"}}></div>
                             </div>}
