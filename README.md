@@ -58,4 +58,4 @@ cd ../server && npm install
 
 # Start development servers
 cd ../client && npm run dev
-cd ../server && npm run dev
+cd ../server && node server.js
