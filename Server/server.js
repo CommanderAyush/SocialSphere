@@ -17,7 +17,7 @@ const app=express();
 const bcryptSalt=bcrypt.genSaltSync(10);
 app.use(express.json());
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname,"..","Client","dist")));
+// app.use(express.static(path.join(__dirname,"..","Client","dist")));
 const db= new pg.Client({
 
     user:process.env.db_user,
@@ -164,9 +164,9 @@ app.get('/people',async(req,res)=>{
 
 }
 
-app.get("/",(req,res)=>{
-    res.sendFile(path.join(__dirname,"..","Client","dist","index.html"));
-})
+// app.get("/",(req,res)=>{
+//     res.sendFile(path.join(__dirname,"..","Client","dist","index.html"));
+// })
 
 const server=app.listen(port,(req,res)=>{
     console.log(port);
