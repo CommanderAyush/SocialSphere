@@ -8,7 +8,6 @@ import cookieParser from "cookie-parser"
 import ws,{ WebSocketServer } from "ws"
 import path from "path";
 
-
 //Setting up everything
 const __dirname=path.resolve();
 const port=3000;
