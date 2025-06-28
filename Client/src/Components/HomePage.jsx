@@ -20,7 +20,7 @@ function HomePage()
     },[])
     function connectingToWS()
     {
-        const temp=new WebSocket('https://social-sphere-uzoa.onrender.com');
+        const temp=new WebSocket(import.meta.env.VITE_baseURL.replace("http","ws")+"/ws");
         setWs(temp);
         temp.onmessage=({data})=>{
             const myData=JSON.parse(data);
